@@ -1,0 +1,10 @@
+<h1> Dynamic Search </h1>
+
+<%= form_with(url: article_finds_path, method: :get, id: 'search-form') do |form| %>
+  <%= form.search_field :query, id: 'search-input', autocomplete: 'off'  %>
+  <%= form.submit 'Search' %>
+<% end %>
+
+<div id="search_results">
+  <%= render partial: 'search_results', locals: { search_results: @search_results } %>
+</div>

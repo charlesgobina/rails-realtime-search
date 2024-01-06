@@ -1,0 +1,9 @@
+<% if search_results.any? %>
+  <ul>
+    <% search_results.each do |result| %>
+      <li><%= result.query %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No results found.</p>
+<% end %>
